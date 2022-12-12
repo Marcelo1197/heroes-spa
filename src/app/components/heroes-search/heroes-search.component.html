@@ -1,0 +1,9 @@
+<div *ngIf="heroes?.length == 0" class="mt-5">
+  <div class="alert alert-danger" role="alert">
+    Lo sentimos, no se encontraron heroes con ese nombre :(
+  </div>
+</div>
+
+<div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4 mt-3">
+  <app-heroe-card  [heroe]="heroeItem" [index]="heroeItem.id" *ngFor="let heroeItem of heroes; let i = index"></app-heroe-card>
+</div>
